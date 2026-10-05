@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 // @ts-expect-error The global stylesheet is handled by Next.js at build time.
 import "./globals.css";
 import { TRPCReactProvider } from "@/trpc/client";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <TRPCReactProvider>
           {children}
+          <Toaster/>
         </TRPCReactProvider>
       </body>
     </html>
