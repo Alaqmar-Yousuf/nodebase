@@ -60,10 +60,10 @@ export function RegisterForm() {
                 callbackURL: "/",
             },
             {
-                onSuccess:()=>{
+                onSuccess: () => {
                     router.push("/");
                 },
-                onError:(ctx) => {
+                onError: (ctx) => {
                     toast.error(ctx.error.message);
                 }
             }
@@ -94,6 +94,7 @@ export function RegisterForm() {
                                         type="button"
                                         disabled={isPending}
                                     >
+                                        <Image alt="GitHub" src="/logos/github.svg" width={20} height={20} />
                                         Continue with GitHub
 
                                     </Button>
@@ -103,6 +104,7 @@ export function RegisterForm() {
                                         type="button"
                                         disabled={isPending}
                                     >
+                                        <Image alt="Google" src="/logos/google.svg" width={20} height={20} />
                                         Continue with Google
 
                                     </Button>
