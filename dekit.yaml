@@ -1,0 +1,9 @@
+
+tasks:
+  inngest:
+    cmd: ["cmd", "/c", "npm run inngest:dev"]
+    autostart: true
+
+  next:
+    cmd: ["cmd", "/c", "npm run dev"]
+    autostart: true
