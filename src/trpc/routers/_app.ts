@@ -1,6 +1,8 @@
 import { baseProcedure, createTRPCRouter, protectedProcedure } from "../init";
 import prisma from "@/lib/db";
 import { inngest } from "@/inngest/client";
+import { TRPCError } from "@trpc/server";
+import { logger } from "better-auth";
 
 export const appRouter = createTRPCRouter({
   testAi: baseProcedure.mutation(async () => {
